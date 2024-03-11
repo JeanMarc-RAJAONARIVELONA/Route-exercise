@@ -1,11 +1,15 @@
-import React from "react";
+import "../styles/globals.css";
+import Header from "./component/Header/Header";
+import Footer from "./component/footer/Footer";
 
-function Home() {
+function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <h1>homepage</h1>
-    </div>
+    <>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </>
   );
 }
 
-export default Home;
+export default MyApp;
